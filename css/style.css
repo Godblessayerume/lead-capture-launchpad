@@ -449,10 +449,11 @@ video {
   background-color: rgb(40 202 65 / var(--tw-bg-opacity, 1));
 }
 .bg-dark {
-  background-color: #120000;
+  --tw-bg-opacity: 1;
+  background-color: rgb(13 17 22 / var(--tw-bg-opacity, 1));
 }
 .bg-dark\/60 {
-  background-color: rgba(18, 0, 0, 0.6);
+  background-color: rgba(13, 17, 22, 0.6);
 }
 .bg-white\/10 {
   background-color: hsla(0, 0%, 100%, 0.1);
@@ -511,7 +512,7 @@ video {
   line-height: 1.1;
 }
 .tracking-tight {
-  letter-spacing: -0.025em;
+  letter-spacing: -0.0001em;
 }
 .tracking-wide {
   letter-spacing: 0.025em;
@@ -598,75 +599,10 @@ body {
     max-width: 36rem;
   }
   .lg\:scale-125 {
-    --tw-scale-x: 1;
-    --tw-scale-y: 1;
+    --tw-scale-x: 1.15;
+    --tw-scale-y: 1.15;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y))
       rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
       scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
-}
-
-/* BRAND STYLING & KIT FORM OVERRIDES */
-#kit-form-container {
-  width: 100% !important;
-  max-width: 100% !important;
-  display: block !important;
-}
-
-#kit-form-container iframe,
-#kit-form-container .formkit-form,
-#kit-form-container form {
-  width: 100% !important;
-  max-width: 100% !important;
-  display: block !important;
-}
-
-#kit-form-container input[type="text"],
-#kit-form-container input[type="email"],
-#kit-form-container .formkit-input {
-  background-color: rgba(245, 245, 245, 0.04) !important;
-  border: 1px solid rgba(201, 169, 110, 0.35) !important;
-  color: #f5f5f5 !important;
-  border-radius: 6px !important;
-  padding: 12px 16px !important;
-  font-family: "Manrope", sans-serif !important;
-  transition: all 0.3s ease !important;
-  font-size: 15px !important;
-}
-
-#kit-form-container input::placeholder {
-  color: rgba(245, 245, 245, 0.4) !important;
-}
-
-#kit-form-container input:focus,
-#kit-form-container .formkit-input:focus {
-  border-color: #c9a96e !important;
-  box-shadow: 0 0 10px rgba(201, 169, 110, 0.2) !important;
-  outline: none !important;
-  background-color: rgba(245, 245, 245, 0.08) !important;
-}
-
-#kit-form-container button,
-#kit-form-container [type="submit"],
-#kit-form-container .formkit-submit {
-  background: linear-gradient(135deg, #c9a96e 0%, #b39358 100%) !important;
-  color: #120000 !important;
-  font-weight: 700 !important;
-  letter-spacing: 1px !important;
-  text-transform: uppercase !important;
-  border: none !important;
-  border-radius: 6px !important;
-  padding: 14px 28px !important;
-  transition: all 0.3s ease !important;
-  cursor: pointer !important;
-  font-size: 14px !important;
-  box-shadow: 0 4px 12px rgba(201, 169, 110, 0.15) !important;
-}
-
-#kit-form-container button:hover,
-#kit-form-container [type="submit"]:hover,
-#kit-form-container .formkit-submit:hover {
-  transform: translateY(-1px) !important;
-  box-shadow: 0 6px 20px rgba(201, 169, 110, 0.35) !important;
-  filter: brightness(1.05);
 }
