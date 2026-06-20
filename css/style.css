@@ -668,12 +668,3 @@ body {
   color: #120000 !important;
   box-shadow: 0 0 20px rgba(245, 245, 245, 0.4) !important;
 }
-
-/* Hide background backdrop injected by ConvertKit */
-.formkit-background, 
-[data-uid] .formkit-background {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
