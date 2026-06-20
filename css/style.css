@@ -141,6 +141,13 @@ body {
   margin: 0;
   line-height: inherit;
 }
+
+:root {
+  --brand-dark: #120000; /* primary background */
+  --brand-cream: #f5f5f5; /* primary text/cream */
+  --brand-gold: #c9a96e; /* accent/gold */
+  --brand-dark-rgb: 18, 0, 0; /* helper for rgba() */
+}
 hr {
   height: 0;
   color: inherit;
@@ -450,10 +457,10 @@ video {
 }
 .bg-dark {
   --tw-bg-opacity: 1;
-  background-color: rgb(18 0 0 / var(--tw-bg-opacity, 1));
+  background-color: var(--brand-dark);
 }
 .bg-dark\/60 {
-  background-color: rgba(18, 0, 0, 0.6);
+  background-color: rgba(var(--brand-dark-rgb), 0.6);
 }
 .bg-white\/10 {
   background-color: hsla(0, 0%, 100%, 0.1);
@@ -512,7 +519,7 @@ video {
   line-height: 1.1;
 }
 .tracking-tight {
-  letter-spacing: -0.025em;
+  letter-spacing: -0.0001em;
 }
 .tracking-wide {
   letter-spacing: 0.025em;
@@ -522,16 +529,16 @@ video {
 }
 .text-cream {
   --tw-text-opacity: 1;
-  color: rgb(245 245 245 / var(--tw-text-opacity, 1));
+  color: var(--brand-cream);
 }
 .text-cream\/20 {
-  color: rgba(245, 245, 245, 0.2);
+  color: rgba(245,245,245,0.2);
 }
 .text-cream\/40 {
-  color: rgba(245, 245, 245, 0.4);
+  color: rgba(245,245,245,0.4);
 }
 .text-cream\/50 {
-  color: rgba(245, 245, 245, 0.7);
+  color: rgba(245,245,245,0.7);
 }
 .text-white {
   --tw-text-opacity: 1;
@@ -581,13 +588,24 @@ body {
     max-width: 55%;
   }
   .md\:scale-110 {
-    --tw-scale-x: 1.1;
-    --tw-scale-y: 1.1;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y))
       rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
       scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
   .md\:flex-row {
+
+/* Brand helpers */
+.bg-brand { background-color: var(--brand-dark); }
+.text-brand-cream { color: var(--brand-cream); }
+.accent-gold { color: var(--brand-gold); }
+.bg-accent-gold { background-color: var(--brand-gold); }
+.brand-gradient {
+  background: linear-gradient(90deg, var(--brand-cream) 0%, var(--brand-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
     flex-direction: row;
   }
   .md\:justify-center {
@@ -605,66 +623,4 @@ body {
       rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
       scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
-}
-
-/* ConvertKit Form Custom Overrides */
-#kit-form-container form,
-#kit-form-container .formkit-form,
-#kit-form-container .seva-form {
-  background: transparent !important;
-  border: none !important;
-  padding: 0 !important;
-  box-shadow: none !important;
-}
-
-#kit-form-container input[type="email"],
-#kit-form-container .formkit-input {
-  background-color: rgba(255, 255, 255, 0.04) !important;
-  border: 1px solid rgba(201, 169, 110, 0.25) !important;
-  color: #f5f5f5 !important;
-  border-radius: 9999px !important;
-  padding: 14px 24px !important;
-  font-family: 'Manrope', sans-serif !important;
-  font-size: 15px !important;
-  width: 100% !important;
-  transition: all 0.3s ease !important;
-}
-
-#kit-form-container input[type="email"]:focus,
-#kit-form-container .formkit-input:focus {
-  border-color: #c9a96e !important;
-  background-color: rgba(255, 255, 255, 0.08) !important;
-  outline: none !important;
-  box-shadow: 0 0 12px rgba(201, 169, 110, 0.2) !important;
-}
-
-#kit-form-container button,
-#kit-form-container [type="submit"],
-#kit-form-container .formkit-submit,
-#kit-form-container .formkit-button {
-  background-color: #c9a96e !important;
-  background-image: none !important;
-  color: #120000 !important;
-  font-weight: 700 !important;
-  font-family: 'Manrope', sans-serif !important;
-  font-size: 14px !important;
-  text-transform: uppercase !important;
-  letter-spacing: 2px !important;
-  border-radius: 9999px !important;
-  border: none !important;
-  padding: 14px 28px !important;
-  margin-top: 12px !important;
-  width: 100% !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-  box-shadow: 0 4px 12px rgba(201, 169, 110, 0.15) !important;
-}
-
-#kit-form-container button:hover,
-#kit-form-container [type="submit"]:hover,
-#kit-form-container .formkit-submit:hover,
-#kit-form-container .formkit-button:hover {
-  background-color: #f5f5f5 !important;
-  color: #120000 !important;
-  box-shadow: 0 0 20px rgba(245, 245, 245, 0.4) !important;
 }
