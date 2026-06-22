@@ -665,12 +665,7 @@ body {
   background: var(--brand-cream);
   box-shadow: 0 24px 64px rgba(18, 0, 0, 0.12);
 }
-.container.default .inner {
-  padding: 0 1rem;
-  max-width: 860px;
-  margin: 0 auto;
-  text-align: left;
-}
+
 .p {
   display: block;
   margin: 0.6rem 0;
