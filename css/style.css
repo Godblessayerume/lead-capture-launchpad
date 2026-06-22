@@ -657,9 +657,9 @@ body {
 }
 .container.default .wrapper {
   width: 100%;
-  max-width: 72rem;
+  max-width: 70rem;
   margin: 1rem auto;
-  padding: 2.5rem 1.5rem;
+  padding: 1rem 4.5rem 2rem;
   border: 1px solid #120000;
   border-radius: 1.25rem;
   background: var(--brand-cream);
@@ -698,18 +698,17 @@ body {
 }
 
 #text02 {
-  text-transform: titlecase;
-  line-height: 1.05;
-  padding: 10px 0;
+  line-height: 1.25;
+  padding: 10px 0 20px 0;
   margin: auto;
-  font-size: clamp(28px, 4vw, 48px);
+  font-size: clamp(28px, 4vw, 42px);
   color: var(--brand-dark);
   font-weight: 700;
 }
 #text04 {
   color: rgba(18, 0, 0, 0.86);
   margin: 0 0 1rem;
-  font-size: 1.25rem;
+  font-size: clamp(20px, 4vw, 42px);
   font-weight: 700;
 }
 
