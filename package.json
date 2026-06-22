@@ -1,0 +1,24 @@
+{
+  "name": "lead-capture-launchpad",
+  "version": "1.0.0",
+  "description": "Lead-Capture Launchpad - A FREE, 6-day email course",
+  "private": true,
+  "scripts": {
+    "dev": "npx http-server . -p 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Godblessayerume/lead-capture-launchpad.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Godblessayerume/lead-capture-launchpad/issues"
+  },
+  "homepage": "https://github.com/Godblessayerume/lead-capture-launchpad#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
