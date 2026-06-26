@@ -359,7 +359,7 @@ video {
   margin-right: auto;
 }
 .mb-8 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 .mt-12 {
   margin-top: 3rem;
@@ -669,7 +669,7 @@ body {
 .p {
   display: block;
   margin: 0.6rem 0;
-  font-size: 1rem;
+  font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.35rem);
   font-weight: 600;
   color: var(--brand-dark);
 }
@@ -695,21 +695,6 @@ body {
 .kit-center-form .kit-form input[type="submit"] {
   width: 100% !important;
   max-width: none !important;
-}
-
-#text02 {
-  line-height: 1.25;
-  padding: 10px 0 20px 0;
-  margin: auto;
-  font-size: clamp(28px, 4vw, 42px);
-  color: var(--brand-dark);
-  font-weight: 700;
-}
-#text04 {
-  color: rgba(18, 0, 0, 0.86);
-  margin: 0 0 1rem;
-  font-size: clamp(19px, 4vw, 24px);
-  font-weight: 700;
 }
 
 .p strong {
@@ -751,19 +736,20 @@ body {
   gap: 0.5rem;
   padding: 1rem 0;
   border-bottom: 1px solid rgba(18, 0, 0, 0.08);
+  font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.35rem);
 }
 .syllabus-item:last-child {
   border-bottom: none;
 }
 .syllabus-item strong {
   color: var(--brand-gold);
-  display: block;
+  display: inline;
   font-weight: 700;
-  margin-bottom: 0.25rem;
+  margin-right: 0.25rem;
 }
 .syllabus-item p {
   margin: 0;
-  color: var(--brand-dark);
+  color: inherit;
   line-height: 1.6;
 }
 .muted {
@@ -869,11 +855,34 @@ body {
   animation: page-card-enter 0.8s ease-out both;
 }
 
+/* Dark centered card variant */
+.page-card--dark {
+  background: var(--brand-dark);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.5),
+    0 2px 8px rgba(255, 255, 255, 0.04);
+  color: var(--brand-cream);
+}
+
+/* Text adjustments for dark card */
+.page-card--dark .section-heading {
+  color: var(--brand-cream);
+}
+
+.page-card--dark .section-description {
+  color: rgba(245, 245, 245, 0.75);
+}
+
+.page-card--dark .syllabus-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 .page-card__inner {
   padding: 2.5rem 5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 /* Gradient heading (cream → gold) */
@@ -884,10 +893,13 @@ body {
   text-transform: uppercase;
   line-height: 1.15;
   letter-spacing: 0.01em;
-  background: linear-gradient(to right, #1a1a1a 0%, var(--brand-gold) 100%);
+  color: var(--brand-dark);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.index-heading {
+  color: var(--brand-cream) !important;
 }
 
 /* Sub-heading */
@@ -908,12 +920,42 @@ body {
   color: var(--brand-dark);
 }
 
+.index-subheading {
+  color: var(--brand-cream) !important;
+  font-size: clamp(1.25rem, 4vw, 2.04rem) !important;
+}
 /* Body text */
 .page-body {
   font-family: Manrope, sans-serif;
   font-size: clamp(1.1458rem, 1.5vw + 0.5rem, 1.4902rem);
   line-height: 1.4;
-  color: #333232;
+  color: var(--brand-dark);
+}
+
+/* Bullet list */
+.page-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.page-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: var(--brand-dark);
+}
+
+.page-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  background: var(--brand-gold);
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(201, 169, 110, 0.35);
 }
 
 .survey-page-body {
@@ -941,17 +983,17 @@ body {
 
 /* Accent panel inside the card */
 .page-accent-panel {
-  background: rgba(201, 169, 110, 0.06);
-  border: 1px solid rgba(201, 169, 110, 0.18);
+  background: var(--brand-dark);
+  border: 1px solid var(--brand-gold);
   border-radius: 0.75rem;
   padding: 1.75rem 2rem;
 }
 
 .page-accent-panel p {
   font-family: Manrope, sans-serif;
-  font-size: 1rem;
+    font-size: clamp(1.125rem, 1.5vw + 0.5rem, 1.45rem);
+  color: var(--brand-cream);
   line-height: 1.7;
-  color: var(--brand-dark);
   margin: 0 0 0.75rem;
 }
 
@@ -964,15 +1006,15 @@ body {
   font-family: Manrope, sans-serif;
   font-weight: 700;
   font-style: italic;
-  color: var(--brand-dark);
+  color: var(--brand-gold) !important;
   font-size: 1rem;
   margin-top: 0.5rem;
 }
 
 /* Highlight text in gold */
-.page-gold {
-  color: var(--brand-gold);
-  font-weight: 700;
+.page-dark {
+  color: var(--brand-dark) !important;
+  font-weight: 700 !important;
 }
 
 /* PS section with gold left border */
@@ -987,15 +1029,15 @@ body {
 .page-ps .ps-label {
   font-weight: 700;
   color: var(--brand-dark);
-  font-size: clamp(1.1458rem, 1.5vw + 0.5rem, 1.4902rem);
+  font-size: clamp(1.125rem, 1.5vw + 0.5rem, 1.45rem);
   display: inline;
   margin-right: 0.25rem;
 }
 
 .page-ps .ps-text {
   font-family: Manrope, sans-serif;
-  font-size: clamp(1.1458rem, 1.5vw + 0.5rem, 1.4902rem);
-  color: rgba(18, 0, 0, 0.8);
+  font-size: clamp(1.1258rem, 1.5vw + 0.5rem, 1.45rem);
+  color: var(--brand-dark);
   line-height: 1.4;
   margin: 0 0 1rem;
 }
@@ -1005,7 +1047,7 @@ body {
 }
 
 .page-ps .ps-text a {
-  color: var(--brand-gold);
+  color: var(--brand-dark);
   text-decoration: none;
   font-weight: 800;
   border-bottom: 1px solid var(--brand-gold);
@@ -1042,5 +1084,19 @@ body {
   .page-card__inner {
     padding: 1.75rem 1.25rem;
     gap: 1.25rem;
+  }
+}
+
+/* Syllabus outer flex container wrapper */
+.syllabus-section-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 48px 20px 80px;
+}
+
+@media (max-width: 768px) {
+  .syllabus-section-wrapper {
+    padding: 32px 16px 60px;
   }
 }
