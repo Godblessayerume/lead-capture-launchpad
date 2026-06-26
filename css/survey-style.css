@@ -39,17 +39,17 @@
 
 .survey-next-steps__heading {
   font-family: Anton, sans-serif;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: rgba(18, 0, 0, 0.35);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgba(18, 0, 0, 0.65);
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.2em;
   margin-bottom: 1rem;
 }
 
 /* Activity feed */
 .activity-feed {
-  background: rgba(18, 0, 0, 0.03);
+  background: white;
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 0.75rem;
   padding: 20px 24px;
@@ -91,20 +91,20 @@
 .task-dot {
   width: 8px;
   height: 8px;
-  background: var(--brand-gold);
+  background: var(--brand-dark);
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(201, 169, 110, 0.4);
+  box-shadow: 0 0 8px rgba(49, 39, 20, 0.4);
   flex-shrink: 0;
 }
 
 .task-action {
-  color: var(--brand-dark);
+  color: var(--brand-gold);
   font-weight: 700;
   font-size: 0.95rem;
 }
 
 .task-target {
-  color: rgba(18, 0, 0, 0.5);
+  color: var(--brand-dark);
   font-size: 0.95rem;
 }
 
@@ -124,9 +124,9 @@
 }
 
 .countdown-value {
-  font-family: Anton, sans-serif;
+  font-family: Manrope, sans-serif;
   font-size: clamp(2.5rem, 6vw, 3.75rem);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1;
   letter-spacing: 0.04em;
   color: var(--brand-dark);

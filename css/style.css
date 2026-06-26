@@ -842,7 +842,6 @@ body {
 .page-glow {
   position: absolute;
   top: 0;
-  left: 50%;
   transform: translateX(-50%);
   width: 800px;
   height: 420px;
@@ -861,7 +860,7 @@ body {
   z-index: 1;
   width: 100%;
   max-width: 52rem;
-  background: #ffffff;
+  background: #f5f5f5;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
   box-shadow:
@@ -880,7 +879,7 @@ body {
 /* Gradient heading (cream → gold) */
 .page-heading {
   font-family: Anton, sans-serif;
-  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-size: clamp(1.8rem, 4vw, 3.25rem);
   font-weight: 400;
   text-transform: uppercase;
   line-height: 1.15;
@@ -893,21 +892,36 @@ body {
 
 /* Sub-heading */
 .page-subheading {
-  font-family: Inter, Manrope, sans-serif;
+  font-family: Manrope, sans-serif;
   font-size: clamp(1.25rem, 2.5vw, 1.75rem);
   font-weight: 700;
   color: var(--brand-dark);
   line-height: 1.4;
 }
 
+.survey-page-subheading {
+  font-family: manrope, sans-serif;
+  font-size: clamp(1.25rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  color: var(--brand-dark);
+}
+
 /* Body text */
 .page-body {
   font-family: Manrope, sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: clamp(1.1458rem, 1.5vw + 0.5rem, 1.4902rem);
+  line-height: 1.4;
   color: #333232;
 }
 
+.survey-page-body {
+  font-family: Manrope, sans-serif;
+  font-size: clamp(1rem, 1.5vw + 0.5rem, 1.2rem);
+  line-height: 1.4;
+  color: var(--brand-dark);
+}
 .page-body strong {
   color: var(--brand-dark);
   font-weight: 700;
@@ -972,17 +986,17 @@ body {
 
 .page-ps .ps-label {
   font-weight: 700;
-  color: var(--brand-gold);
-  font-size: 0.95rem;
+  color: var(--brand-dark);
+  font-size: clamp(1.1458rem, 1.5vw + 0.5rem, 1.4902rem);
   display: inline;
   margin-right: 0.25rem;
 }
 
 .page-ps .ps-text {
   font-family: Manrope, sans-serif;
-  font-size: 0.95rem;
-  color: rgba(18, 0, 0, 0.7);
-  line-height: 1.75;
+  font-size: clamp(1.1458rem, 1.5vw + 0.5rem, 1.4902rem);
+  color: rgba(18, 0, 0, 0.8);
+  line-height: 1.4;
   margin: 0 0 1rem;
 }
 
@@ -993,7 +1007,7 @@ body {
 .page-ps .ps-text a {
   color: var(--brand-gold);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 800;
   border-bottom: 1px solid var(--brand-gold);
   transition: opacity 0.3s ease;
 }
